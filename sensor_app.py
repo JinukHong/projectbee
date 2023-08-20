@@ -7,9 +7,9 @@ import openai
 import os
 from dotenv import load_dotenv
 
-#load_dotenv()
-#openai.api_key = os.environ.get("OPENAI_API_KEY")
-
+#load_dotenv("/Users/jinuk/Desktop/3학년/3학년 활동/창의충전소/projectbee/.env")
+#openai.api_key = "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"#os.getenv("OPENAI_API_KEY2")
+#print(os.getenv("OPENAI_API_KEY"))
 
 # Initialize OpenAI API
 openai.api_key = st.secrets["OPENAI_API_KEY"]
@@ -109,3 +109,4 @@ with tab3:
     # Extract the response
     response = completion.choices[0].message.content
     st.write(f"AI Secretary: {response}")
+
