@@ -4,10 +4,12 @@ import numpy as np
 import datetime
 import collections
 import openai
-#import os
-#from dotenv import load_dotenv
+import os
+from dotenv import load_dotenv
 
-#load_dotenv('env/data.env')
+#load_dotenv()
+#openai.api_key = os.environ.get("OPENAI_API_KEY")
+
 
 # Initialize OpenAI API
 openai.api_key = st.secrets["OPENAI_API_KEY"]
