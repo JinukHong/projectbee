@@ -5,14 +5,9 @@ import datetime
 import collections
 import openai
 import os
-from dotenv import load_dotenv
 
-#load_dotenv("/Users/jinuk/Desktop/3학년/3학년 활동/창의충전소/projectbee/.env")
-#openai.api_key = "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"#os.getenv("OPENAI_API_KEY2")
-#print(os.getenv("OPENAI_API_KEY"))
 
-# Initialize OpenAI API
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets["secrets"]['OPENAI_API_KEY']
 
 
 st.title('Sein Farm in your hand')
@@ -109,4 +104,3 @@ with tab3:
     # Extract the response
     response = completion.choices[0].message.content
     st.write(f"AI Secretary: {response}")
-
