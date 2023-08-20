@@ -10,7 +10,7 @@ import openai
 #load_dotenv('env/data.env')
 
 # Initialize OpenAI API
-openai.api_key = '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'
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 
 st.title('Sein Farm in your hand')
